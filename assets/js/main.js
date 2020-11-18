@@ -34,12 +34,12 @@ var messageIndexComparison = document.getElementById("comparison_index");
 i = 0;
 while (i < surnameList.length){
   if(surnameList[i] == newSurname){
-    console.log("Il tuo cognome, dopo l'ordinamento, è in posizione " + i);
-    messageIndexComparison.innerHTML = " PRIMA SOLUZIONE CON CONFRONTO DELL'INDEX --- Il tuo cognome, dopo l'ordinamento, è in posizione " + i;
+    console.log("Il tuo cognome, dopo l'ordinamento, è in posizione " + i+1);
+    messageIndexComparison.innerHTML = " PRIMA SOLUZIONE CON CONFRONTO DELL'INDEX --- Il tuo cognome, dopo l'ordinamento, è in posizione " + (i+1);
   }
   i++;
 }
 
 //utlizzo metodo indexof
 var messageIndexOf = document.getElementById("indexof_method");
-messageIndexOf.innerHTML = "SECONDA SOLUZIONE CON METODO INDEXOF --- Il tuo cognome, dopo l'ordinamento, è in posizione " + surnameList.indexOf(newSurname);
+messageIndexOf.innerHTML = "SECONDA SOLUZIONE CON METODO INDEXOF --- Il tuo cognome, dopo l'ordinamento, è in posizione " + (surnameList.indexOf(newSurname)+1);
