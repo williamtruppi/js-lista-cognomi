@@ -13,3 +13,11 @@ console.log(surnameList);
 //ordinamento alfabetico dell'array
 surnameList.sort();
 console.log(surnameList);
+
+i = 0;
+while (i < surnameList.length){
+  if(surnameList[i] == surnameUser){
+    console.log("Il tuo cognome, dopo l'ordinamento, è in posizione " + i);
+  }
+  i++;
+}
