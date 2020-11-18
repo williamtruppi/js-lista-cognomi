@@ -9,3 +9,7 @@ console.log(surnameUser);
 //inserimento del cognome dell'utente nell'array
 surnameList.push(surnameUser);
 console.log(surnameList);
+
+//ordinamento alfabetico dell'array
+surnameList.sort();
+console.log(surnameList);
