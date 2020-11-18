@@ -12,10 +12,11 @@ outputArray.innerHTML = "Array appena generato ---> " + surnameList;
 
 //acquisizione cognome utente
 var surnameUser = prompt("Inserire il proprio cognome");
-console.log(surnameUser);
+var newSurname = surnameUser.charAt(0).toUpperCase() + surnameUser.slice(1);
+console.log(newSurname);
 
 //inserimento del cognome dell'utente nell'array
-surnameList.push(surnameUser);
+surnameList.push(newSurname);
 console.log(surnameList);
 var outputArray = document.getElementById("before_sort");
 outputArray.innerHTML = "Array NON ordinato con cognome utente  ---> " + surnameList;
@@ -32,7 +33,7 @@ var messageIndexComparison = document.getElementById("comparison_index");
 //comparazione dell'index e successiva stampa
 i = 0;
 while (i < surnameList.length){
-  if(surnameList[i] == surnameUser){
+  if(surnameList[i] == newSurname){
     console.log("Il tuo cognome, dopo l'ordinamento, è in posizione " + i);
     messageIndexComparison.innerHTML = " PRIMA SOLUZIONE CON CONFRONTO DELL'INDEX --- Il tuo cognome, dopo l'ordinamento, è in posizione " + i;
   }
@@ -41,4 +42,4 @@ while (i < surnameList.length){
 
 //utlizzo metodo indexof
 var messageIndexOf = document.getElementById("indexof_method");
-messageIndexOf.innerHTML = "SECONDA SOLUZIONE CON METODO INDEXOF --- Il tuo cognome, dopo l'ordinamento, è in posizione " + surnameList.indexOf(surnameUser);
+messageIndexOf.innerHTML = "SECONDA SOLUZIONE CON METODO INDEXOF --- Il tuo cognome, dopo l'ordinamento, è in posizione " + surnameList.indexOf(newSurname);
